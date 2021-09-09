@@ -16,9 +16,9 @@ public enum PagingInterceptResult<Key: Equatable, Value> {
 open class PagingInterceptor<Key: Equatable, Value> {
     public init() { }
     
-    public func intercept(request: PagingRequest<Key>) throws -> PagingInterceptResult<Key, Value> {
+    open func intercept(request: PagingRequest<Key>) throws -> PagingInterceptResult<Key, Value> {
         fatalError()
     }
     
-    public func handle(result page: Page<Key, Value>) { }
+    open func handle(result page: Page<Key, Value>) { }
 }

@@ -13,7 +13,7 @@ public enum PagingInterceptResult<Key: Equatable, Value> {
     case complete(Page<Key, Value>)
 }
 
-public class PagingInterceptor<Key: Equatable, Value> {
+open class PagingInterceptor<Key: Equatable, Value> {
     public init() { }
     
     public func intercept(request: PagingRequest<Key>) throws -> PagingInterceptResult<Key, Value> {

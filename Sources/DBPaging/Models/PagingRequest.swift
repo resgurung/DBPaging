@@ -62,6 +62,14 @@ extension PagingRequest {
     }
 }
 
+public extension PagingRequest {
+    
+    var moc: NSManagedObjectContext? {
+        
+        params.userInfo?[CoreDataInterceptorUserInfoParams.moc] as? NSManagedObjectContext
+    }
+}
+
 
 public typealias PagingRequestParamsUserInfo = [AnyHashable: Any?]?
 

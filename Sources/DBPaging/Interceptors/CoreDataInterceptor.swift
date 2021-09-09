@@ -44,11 +44,3 @@ where DataSource.Key == Key, DataSource.Value == Value {
         }
     }
 }
-
-public extension PagingRequest {
-    
-    var moc: NSManagedObjectContext? {
-        
-        params.userInfo?[CoreDataInterceptorUserInfoParams.moc] as? NSManagedObjectContext
-    }
-}

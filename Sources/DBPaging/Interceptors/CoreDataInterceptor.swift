@@ -8,8 +8,10 @@
 import Foundation
 import CoreData
 
-
-public class CoreDataInterceptor<Key, Value, DataSource: CoreDataInterceptorDataSourceProtocol>: PagingInterceptor<Key, Value>
+/*
+    Subclass CoreDataInterceptor to customize for intercept(_)
+ */
+open class CoreDataInterceptor<Key, Value, DataSource: CoreDataInterceptorDataSourceProtocol>: PagingInterceptor<Key, Value>
 where DataSource.Key == Key, DataSource.Value == Value {
     
     private let dataSource: DataSource

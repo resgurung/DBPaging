@@ -30,7 +30,5 @@ public protocol CoreDataInterceptorDataSourceProtocol {
     
     func insert(remoteValues: [RemoteValue], in moc: NSManagedObjectContext) throws -> [Value] // store data that came from PagingSource into the DB and return the mapped values
     
-    func insertSS(remoteValues: [RemoteValue], completion: ([Value]) -> ())
-    
     func deleteAll(in moc: NSManagedObjectContext) throws
 }
